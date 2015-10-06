@@ -8,6 +8,6 @@ describe service('apache2') do
   it { should be_running }
 end
 
-describe port(80) do
+describe port(55555) do
 	it { should be_listening }
 end

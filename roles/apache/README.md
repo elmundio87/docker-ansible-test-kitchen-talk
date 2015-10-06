@@ -1,39 +1,11 @@
-apache
-=========
+As a developer
+I need an ansible role that will install Apache on an Ubuntu Server
+So that I can host the best website ever
 
-Install Apache HTTP server
+Additional notes:
 
-Requirements
-------------
-
-CentOS 7
-
-Role Variables
---------------
-
-None
-
-Dependencies
-------------
-
-None
-
-Example Playbook
-----------------
-
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: apache }
-
-License
--------
-
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
-
+- Install whatever the latest version of Apache is, we're a bleeding edge company
+- Must work on Ubuntu 14.04 (current) and 15.04 (future rollout)
+- The external load balancer will be routed to port 55555 on all machines
+- The NSA wants their own root account on all our environments
+- Please disable telnet for maximum security

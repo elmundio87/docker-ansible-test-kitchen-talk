@@ -11,9 +11,9 @@ provisioner:
   require_ruby_for_busser: true
 
 platforms:
-  - name: ubuntu-15.04
+  - name: ubuntu-14.04
     driver_config:
-      image: edmundd:ubuntu-15.04
+      image: edmundd:ubuntu-14.04
       platform: ubuntu
 
 suites:
