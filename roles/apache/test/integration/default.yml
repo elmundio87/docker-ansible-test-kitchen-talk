@@ -1,0 +1,6 @@
+---
+- hosts: test-kitchen
+  sudo: yes
+  roles:
+    - apache
+  vars:

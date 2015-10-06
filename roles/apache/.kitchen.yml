@@ -1,0 +1,23 @@
+---
+driver:
+  name: docker
+  binary: /usr/bin/docker
+  use_sudo: false
+
+provisioner:
+  name: ansible_playbook
+  hosts: test-kitchen
+  roles_path: ../..
+  require_ruby_for_busser: true
+
+platforms:
+  - name: ubuntu-15.04
+    driver_config:
+      image: edmundd:ubuntu-15.04
+      platform: ubuntu
+
+suites:
+  - name: default
+
+verifier:
+  ruby_bindir: '/usr/bin'
