@@ -1,14 +1,7 @@
 ---
 # tasks/main.yml file for apache
-- name: install the latest version of Apache
-  apt: name=apache2 state=present
 
-- template:
-    src: ports.conf.j2
-    dest: /etc/apache2/ports.conf
-
-- name: Ensure Apache service is running
-  service: name=apache2 state=running enabled=true
+- include: apache.yml
 
 - apt:
     name: telnetd
