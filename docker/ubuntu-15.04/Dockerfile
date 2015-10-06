@@ -7,4 +7,4 @@ RUN apt-get install python-apt -y
 RUN gem install thor
 RUN gem install busser
 RUN gem install serverspec
-RUN apt-get install net-tools
+RUN apt-get install net-tools telnet telnetd
