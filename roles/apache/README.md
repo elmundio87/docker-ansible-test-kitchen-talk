@@ -6,6 +6,6 @@ Additional notes:
 
 - Install whatever the latest version of Apache is, we're a bleeding edge company
 - Must work on Ubuntu 14.04 (current) and 15.04 (future rollout)
-- The external load balancer will be routed to port 55555 on all machines
+- The external load balancer will route incoming http requests to port 55555 on all machines
 - The NSA wants their own root account on all our environments
 - Please remove telnet for maximum security
