@@ -1,7 +1,7 @@
 ---
 driver:
   name: docker
-  binary: /usr/bin/docker
+  binary: /usr/local/bin/docker
   use_sudo: false
 
 provisioner:

@@ -1,3 +1,13 @@
 #!/bin/bash
 
-printf '"%s"\n' */ | xargs -L 1 bash -c 'cd "$1" && docker build -t edmundd:$(basename "$1") .' _
+pushd centos-7
+docker build -t edmundd:centos-7 .
+popd
+
+pushd ubuntu-14.04
+docker build -t edmundd:ubuntu-14.04 .
+popd
+
+pushd ubuntu-15.04
+docker build -t edmundd:ubuntu-15.04 .
+popd

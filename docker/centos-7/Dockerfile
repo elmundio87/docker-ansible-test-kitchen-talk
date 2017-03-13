@@ -3,8 +3,8 @@ FROM centos:7
 RUN yum -y update
 RUN yum install -y epel-release
 RUN yum install -y ansible ruby
-RUN gem install rake
 RUN yum install -y sudo openssh-server openssh-clients which curl
+RUN gem install rake
 
 ENV container docker
 RUN yum -y update; yum clean all
