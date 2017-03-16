@@ -2,7 +2,9 @@
 # tasks/apache.yml file for apache
 
 - name: install the latest version of Apache
-  apt: name=apache2 state=present
+  apt:
+    name: apache2
+    state: present
 
 - name: Run apache on port 55555
   template:
@@ -11,4 +13,7 @@
   notify: restart apache
 
 - name: Ensure Apache service is running
-  service: name=apache2 state=running enabled=true
+  service:
+    name: apache2
+    state: running
+    enabled: true

@@ -15,6 +15,10 @@ platforms:
     driver_config:
       image: edmundd:ubuntu-14.04
       platform: ubuntu
+  # - name: ubuntu-15.04
+  #   driver_config:
+  #     image: edmundd:ubuntu-15.04
+  #     platform: ubuntu
 
 suites:
   - name: default
