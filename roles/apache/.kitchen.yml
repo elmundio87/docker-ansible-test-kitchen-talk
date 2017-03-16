@@ -19,6 +19,10 @@ platforms:
   #   driver_config:
   #     image: edmundd:ubuntu-15.04
   #     platform: ubuntu
+  # - name: centos-7
+  #   driver_config:
+  #     image: edmundd:centos-7
+  #     platform: centos
 
 suites:
   - name: default
