@@ -1,15 +1,31 @@
 require 'spec_helper'
 
-describe package('apache2') do
-  it { should be_installed }
+if os[:family] == "ubuntu"
+
+  describe package('apache2') do
+    it { should be_installed }
+  end
+
+  describe service('apache2') do
+    it { should be_running }
+  end
+
 end
 
-describe service('apache2') do
-  it { should be_running }
+if os[:family] == "redhat"
+
+  describe package('httpd') do
+    it { should be_installed }
+  end
+
+  describe service('apache2') do
+    it { should be_running }
+  end
+
 end
 
 describe port(55555) do
-	it { should be_listening }
+  it { should be_listening }
 end
 
 describe user('NSA') do

@@ -1,7 +1,11 @@
 ---
 # tasks/main.yml file for apache
 
-- include: apache.yml
+- include: apache-debian.yml
+  when: ansible_distribution == 'Ubuntu'
+
+- include: apache-redhat.yml
+  when: ansible_distribution == 'CentOS'
 
 # - name: Remove telnet server
 #   apt:

@@ -1,7 +1,12 @@
 ---
 # handlers/main.yml file for apache
 
-- name: restart apache
+- name: restart apache debian
   service:
     name: apache2
+    state: restarted
+
+- name: restart apache redhat
+  service:
+    name: httpd
     state: restarted

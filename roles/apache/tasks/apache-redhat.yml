@@ -1,19 +1,19 @@
 ---
-# tasks/apache.yml file for apache
+# tasks/apache-redhat.yml file for apache
 
 - name: install the latest version of Apache
-  apt:
-    name: apache2
+  yum:
+    name: httpd
     state: present
 
 - name: Run apache on port 55555
   template:
     src: ports.conf.j2
-    dest: /etc/apache2/ports.conf
-  notify: restart apache
+    dest: /etc/httpd/ports.conf
+  notify: restart apache redhat
 
 - name: Ensure Apache service is running
   service:
-    name: apache2
+    name: httpd
     state: running
     enabled: true
